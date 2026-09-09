@@ -890,8 +890,8 @@ html.is-page-loading {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  padding: 0.7rem;
+  gap: 0.4rem;
+  padding: 0.65rem;
   border-radius: 0.9rem;
   background: #fff;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
@@ -921,7 +921,7 @@ html.is-page-loading {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.65rem;
   border-radius: 0.85rem;
   background: #f9fafb;
 }
@@ -989,7 +989,7 @@ html.is-page-loading {
 .cvh-form {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.4rem;
 }
 
 .cvh-form-label {
@@ -1010,7 +1010,7 @@ html.is-page-loading {
 .cvh-input {
   flex: 1;
   min-width: 0;
-  padding: 0.5rem 0.65rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 0.65rem;
   border: 1px solid #e5e7eb;
   background: transparent;

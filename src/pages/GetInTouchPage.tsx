@@ -128,14 +128,11 @@ function GetInTouchContent() {
                 </div>
 
                 <form id={"cvh-form"} className={"cvh-form"}>
-                  <label className={"cvh-form-label"}>
-                    {"Tell us about your vision"}
-                  </label>
                   <div className={"cvh-form-row"}>
                     <input className={"cvh-input"} type={"text"} name={"name"} placeholder={"Full name"} required />
                     <input className={"cvh-input"} type={"email"} name={"email"} placeholder={"Email"} required />
                   </div>
-                  <textarea className={"cvh-input cvh-textarea"} rows={2} name={"message"} placeholder={"What are you looking to build or improve..."} required></textarea>
+                  <textarea className={"cvh-input cvh-textarea"} rows={1} name={"message"} placeholder={"What are you looking to build or improve..."} required></textarea>
 
                   <div className={"cvh-services"}>
                     <span className={"cvh-form-label"}>
