@@ -1031,37 +1031,18 @@ html.is-page-loading {
   resize: none;
 }
 
-.cvh-services {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.cvh-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-}
-
-.cvh-tag {
-  padding: 0.35rem 0.6rem;
-  border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  color: #374151;
-  font-size: 0.7rem;
-  font-weight: 500;
-  font-family: 'Inter', sans-serif;
+.cvh-select {
+  appearance: none;
+  -webkit-appearance: none;
   cursor: pointer;
-  transition: all 0.15s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 1rem;
+  padding-right: 1.75rem;
 }
-.cvh-tag:hover {
-  border-color: #9ca3af;
-}
-.cvh-tag.is-active {
-  background: #f3f4f6;
-  color: #000;
-  border-color: #000;
+.cvh-select:invalid {
+  color: #9ca3af;
 }
 
 .cvh-submit {
@@ -1083,38 +1064,4 @@ html.is-page-loading {
 .cvh-submit:disabled {
   opacity: 0.6;
   cursor: default;
-}
-
-.cvh-success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1.5rem 0;
-  text-align: center;
-}
-
-.cvh-success-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 9999px;
-  background: #ecfdf5;
-  color: #059669;
-  font-size: 1.25rem;
-}
-
-.cvh-success-heading {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #111827;
-}
-
-.cvh-success-sub {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #6b7280;
 }

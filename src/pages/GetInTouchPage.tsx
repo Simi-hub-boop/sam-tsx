@@ -134,35 +134,21 @@ function GetInTouchContent() {
                   </div>
                   <textarea className={"cvh-input cvh-textarea"} rows={1} name={"message"} placeholder={"What are you looking to build or improve..."} required></textarea>
 
-                  <div className={"cvh-services"}>
-                    <span className={"cvh-form-label"}>
+                  <select className={"cvh-input cvh-select"} name={"service"} defaultValue={""} required>
+                    <option value={""} disabled>
                       {"I need help with..."}
-                    </span>
-                    <div className={"cvh-tags"}>
-                      {SERVICES.map((service) => (
-                        <button type={"button"} key={service} className={"cvh-tag"} data-service={service}>
-                          {service}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                    </option>
+                    {SERVICES.map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
 
                   <button type={"submit"} id={"cvh-submit"} className={"cvh-submit"}>
                     {"Send my message"}
                   </button>
                 </form>
-
-                <div id={"cvh-success"} className={"cvh-success"} hidden>
-                  <div className={"cvh-success-check"}>
-                    {"✓"}
-                  </div>
-                  <p className={"cvh-success-heading"}>
-                    {"You're all set!"}
-                  </p>
-                  <p className={"cvh-success-sub"}>
-                    {"Expect a reply within 24 hours."}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -190,24 +176,7 @@ function PageRuntime() {
   var form = document.getElementById('cvh-form');
   if (!form) return;
 
-  var tags = form.querySelectorAll('.cvh-tag');
-  var selected = [];
-  tags.forEach(function (tag) {
-    tag.addEventListener('click', function () {
-      var service = tag.getAttribute('data-service');
-      var index = selected.indexOf(service);
-      if (index === -1) {
-        selected.push(service);
-        tag.classList.add('is-active');
-      } else {
-        selected.splice(index, 1);
-        tag.classList.remove('is-active');
-      }
-    });
-  });
-
   var submitBtn = document.getElementById('cvh-submit');
-  var successEl = document.getElementById('cvh-success');
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -218,7 +187,6 @@ function PageRuntime() {
     data.forEach(function (value, key) {
       if (String(value).trim()) lines.push(key + ': ' + value);
     });
-    if (selected.length) lines.push('Services: ' + selected.join(', '));
     var body = lines.join('\\n');
     var subject = encodeURIComponent('Website enquiry from ' + (data.get('name') || 'Maddy Group site'));
 
@@ -227,9 +195,9 @@ function PageRuntime() {
 
     setTimeout(function () {
       window.location.href = 'mailto:info@maddygroupltd.com?subject=' + subject + '&body=' + encodeURIComponent(body);
-      form.style.display = 'none';
-      if (successEl) successEl.hidden = false;
-    }, 1000);
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send my message';
+    }, 600);
   });
 })();
 `,
