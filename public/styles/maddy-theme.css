@@ -800,3 +800,9 @@ html.is-page-loading {
   background-color: transparent !important;
   transition: none !important;
 }
+
+/* Get in touch page: shrink the intro copy under "Contact us" so it takes up less visual space */
+.is-contact-hero .git-left p {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+}
