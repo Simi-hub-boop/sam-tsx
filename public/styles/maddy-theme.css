@@ -886,12 +886,13 @@ html.is-page-loading {
 
 .cvh-form-card {
   width: 100%;
-  max-width: 22rem;
+  max-width: 18rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  padding: 0.85rem;
-  border-radius: 1rem;
+  gap: 0.55rem;
+  padding: 0.7rem;
+  border-radius: 0.9rem;
   background: #fff;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
   text-align: left;
@@ -900,7 +901,7 @@ html.is-page-loading {
   will-change: transform;
 }
 @media (min-width: 640px) {
-  .cvh-form-card { border-radius: 1.25rem; padding: 1.1rem; }
+  .cvh-form-card { border-radius: 1rem; padding: 0.9rem; }
 }
 
 .cvh-form-heading {
