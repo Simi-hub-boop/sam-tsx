@@ -804,5 +804,326 @@ html.is-page-loading {
 /* Get in touch page: shrink the intro copy under "Contact us" so it takes up less visual space */
 .is-contact-hero .git-left p {
   font-size: 0.875rem;
-  line-height: 1.4rem;
+  line-height: 1.15rem;
+}
+
+/* Get in touch page: bump up the "Contact us" heading slightly and give it room to breathe above the text */
+.is-contact-hero .git-left h1.is-h2 {
+  font-size: 3.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Get in touch page: video-background hero with centered contact form card
+   ========================================================================== */
+
+.cvh-wrap {
+  padding: 12px;
+}
+@media (min-width: 640px) {
+  .cvh-wrap { padding: 16px; }
+}
+@media (min-width: 768px) {
+  .cvh-wrap { padding: 24px; }
+}
+
+.cvh-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-height: calc(100vh - 24px);
+  background-color: #0a1458;
+}
+@media (min-width: 640px) {
+  .cvh-card { border-radius: 1.5rem; min-height: calc(100vh - 32px); }
+}
+@media (min-width: 768px) {
+  .cvh-card { min-height: calc(100vh - 48px); }
+}
+@media (min-width: 1024px) {
+  .cvh-card { height: calc(100vh - 48px); }
+}
+
+.cvh-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cvh-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(1, 5, 53, 0.35), rgba(1, 5, 53, 0.55));
+}
+
+.cvh-inner {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 6.5rem 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+@media (min-width: 640px) {
+  .cvh-inner { padding: 7rem 1.5rem 2.5rem; min-height: calc(100vh - 32px); }
+}
+@media (min-width: 768px) {
+  .cvh-inner { padding: 8rem 2rem 3rem; min-height: calc(100vh - 48px); }
+}
+@media (min-width: 1024px) {
+  .cvh-inner { height: calc(100vh - 48px); min-height: 0; }
+}
+
+.cvh-headline {
+  margin: 0;
+  max-width: 32rem;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 640px) {
+  .cvh-headline { font-size: 2.4rem; }
+}
+@media (min-width: 1280px) {
+  .cvh-headline { font-size: 2.9rem; }
+}
+
+.cvh-form-card {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+@media (min-width: 640px) {
+  .cvh-form-card { border-radius: 1.5rem; padding: 1.5rem; }
+}
+
+.cvh-form-heading {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 640px) {
+  .cvh-form-heading { font-size: 1.5rem; }
+}
+
+.cvh-contact-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  border-radius: 1rem;
+  background: #f9fafb;
+}
+
+.cvh-contact-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cvh-contact-label {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.cvh-contact-email {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cvh-contact-email:hover {
+  text-decoration: underline;
+}
+
+.cvh-socials {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.cvh-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.75rem;
+  transition: opacity 0.2s ease;
+}
+.cvh-social-btn:hover {
+  opacity: 0.8;
+}
+.cvh-social-twitter { background: #f3f4f6; color: #1f2937; }
+.cvh-social-circle { background: #fce7f3; color: #ec4899; }
+.cvh-social-instagram { background: #ffedd5; color: #fb923c; }
+.cvh-social-linkedin { background: #dbeafe; color: #2563eb; }
+
+.cvh-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.cvh-divider span {
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.cvh-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cvh-form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.cvh-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 640px) {
+  .cvh-form-row { flex-direction: row; }
+}
+
+.cvh-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  color: #111827;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.cvh-input::placeholder {
+  color: #9ca3af;
+}
+.cvh-input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #111827;
+}
+.cvh-textarea {
+  resize: none;
+}
+
+.cvh-services {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cvh-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.cvh-tag {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #374151;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.cvh-tag:hover {
+  border-color: #9ca3af;
+}
+.cvh-tag.is-active {
+  background: #f3f4f6;
+  color: #000;
+  border-color: #000;
+}
+
+.cvh-submit {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 1rem;
+  background: #000;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+.cvh-submit:hover {
+  background: #1f2937;
+}
+.cvh-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.cvh-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.cvh-success-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 1.25rem;
+}
+
+.cvh-success-heading {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cvh-success-sub {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
 }

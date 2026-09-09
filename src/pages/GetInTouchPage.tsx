@@ -1,7 +1,53 @@
+import type { ReactNode } from 'react'
+import { Circle } from 'lucide-react'
 import { Footer } from '../components/layout/Footer.js'
 import { SiteDocument } from '../components/layout/SiteDocument.js'
 import { SiteIcons } from '../components/layout/SiteIcons.js'
 import { sitePageCode } from '../content/sitePageCode.js'
+
+const SERVICES = [
+  'Cybersecurity',
+  'Software Development',
+  'Software Products',
+  'UAV / IoT',
+  'ICT Procurement',
+  'Training',
+  'Other',
+]
+
+function TwitterIcon() {
+  return (
+    <svg width={13} height={13} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.9 1.9h3.7l-8.1 9.3 9.5 12.6h-7.5l-5.9-7.7-6.7 7.7H0l8.7-10L-.4 1.9h7.7l5.3 7.1zm-1.3 19.6h2L6.5 4h-2.2z" />
+    </svg>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg width={13} height={13} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  )
+}
+
+function LinkedinIcon() {
+  return (
+    <svg width={13} height={13} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56z" />
+    </svg>
+  )
+}
+
+function SocialBtn({ href, className, children }: { href: string; className: string; children: ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer" className={`cvh-social-btn ${className}`}>
+      {children}
+    </a>
+  )
+}
 
 function PageHead() {
   return (
@@ -21,6 +67,7 @@ function PageHead() {
       <meta content={"width=device-width, initial-scale=1"} name={"viewport"} />
       <link href={"/styles/webflow.css"} rel={"stylesheet"} type={"text/css"} />
       <link href={"/styles/maddy-theme.css"} rel={"stylesheet"} type={"text/css"} />
+      <link href={"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"} rel={"stylesheet"} />
       <style dangerouslySetInnerHTML={{ __html: sitePageCode.getInTouch[0] }} />
       <script type={"text/javascript"} dangerouslySetInnerHTML={{ __html: sitePageCode.getInTouch[1] }} />
       <SiteIcons />
@@ -32,136 +79,106 @@ function GetInTouchContent() {
   return (
     <div>
       <div className={"page-wrapper dark-wrapper touch-hero is-contact-hero"}>
-        <section className={"section is-get-in-touch-section"}>
-          <div className={"w-layout-blockcontainer container hero-description-container w-container"}>
-            <div className={"git-hero"}>
-              <div data-w-id={"d6ec158b-413a-2252-c730-9e6331badb22"} className={"git-left"}>
-                <h1 data-w-id={"5688d7d9-6d15-3f37-8131-e8be09b8e9fa"} className={"is-h2"}>
-                  {"Contact us"}
-                </h1>
-                <p className={"is-md-font-size-body-l is-bottom-48 is-sm-bottom-32"}>
-                  {"Ready to talk about your next project?"}
-                </p>
-                <p className={"is-bottom-48 is-sm-bottom-32"}>
-                  {"Tell us what you need: cybersecurity support, software development, or a broader technology engagement. We will get back to you promptly."}
-                  <br />
-                  <br />
-                  {"We work with businesses and public organisations across Ghana from our office in Adjiriganor, Accra."}
-                </p>
-                <div className={"text-with-icon is-bottom-24"}>
-                  <img src={"https://cdn.prod.website-files.com/6627b50ad2ace3686c70dd7b/6627b50ad2ace3686c70de6a_Group%20(2).svg"} loading={"lazy"} alt={""} />
-                  <div className={"mail-wrapper"}>
-                    <p className={"is-font-size-body-m"}>
-                      <span className={"is-opacity-60"}>
-                        {"Phone "}
-                      </span>
-                      {"- "}
-                      <a href={"tel:0551111551"} className={"link-on-dark"}>
-                        {"0551111551"}
-                      </a>
-                    </p>
+        <div className={"cvh-wrap"}>
+          <div className={"cvh-card"}>
+            <video
+              className={"cvh-video"}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={"/images/brand/ctavid.mp4"}
+            />
+            <div className={"cvh-overlay"}></div>
+            <div className={"cvh-inner"}>
+              <p className={"cvh-headline"}>
+                {"Let's build something"}
+                <br />
+                {"secure and "}
+                <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>
+                  {"scalable"}
+                </span>
+              </p>
+
+              <div className={"cvh-form-card"}>
+                <h2 className={"cvh-form-heading"}>
+                  {"Say hello! \u{1F44B}"}
+                </h2>
+
+                <div className={"cvh-contact-row"}>
+                  <div className={"cvh-contact-left"}>
+                    <span className={"cvh-contact-label"}>
+                      {"Drop us a line"}
+                    </span>
+                    <a href={"mailto:info@maddygroupltd.com"} className={"cvh-contact-email"}>
+                      {"info@maddygroupltd.com"}
+                    </a>
+                  </div>
+                  <div className={"cvh-socials"}>
+                    <SocialBtn href={"https://twitter.com"} className={"cvh-social-twitter"}>
+                      <TwitterIcon />
+                    </SocialBtn>
+                    <SocialBtn href={"#"} className={"cvh-social-circle"}>
+                      <Circle size={13} />
+                    </SocialBtn>
+                    <SocialBtn href={"https://instagram.com"} className={"cvh-social-instagram"}>
+                      <InstagramIcon />
+                    </SocialBtn>
+                    <SocialBtn href={"https://linkedin.com"} className={"cvh-social-linkedin"}>
+                      <LinkedinIcon />
+                    </SocialBtn>
                   </div>
                 </div>
-                <div className={"text-with-icon is-bottom-24"}>
-                  <img src={"https://cdn.prod.website-files.com/6627b50ad2ace3686c70dd7b/6627b50ad2ace3686c70de6a_Group%20(2).svg"} loading={"lazy"} alt={""} />
-                  <div className={"mail-wrapper"}>
-                    <p className={"is-font-size-body-m"}>
-                      <span className={"is-opacity-60"}>
-                        {"Email "}
-                      </span>
-                      {"- "}
-                      <a href={"mailto:info@maddygroupltd.com"} className={"link-on-dark"}>
-                        {"info@maddygroupltd.com"}
-                      </a>
-                    </p>
-                  </div>
+
+                <div className={"cvh-divider"}>
+                  <span></span>
+                  {"OR"}
+                  <span></span>
                 </div>
-                <div className={"text-with-icon"}>
-                  <img src={"https://cdn.prod.website-files.com/6627b50ad2ace3686c70dd7b/6627b50ad2ace3686c70de6a_Group%20(2).svg"} loading={"lazy"} alt={""} />
-                  <div className={"mail-wrapper"}>
-                    <p className={"is-font-size-body-m"}>
-                      <span className={"is-opacity-60"}>
-                        {"Office "}
-                      </span>
-                      {"- GD-219-3654, Adjetey Mensah Owusu St, Adjiriganor, Accra, Ghana"}
-                      <br />
-                      <span className={"is-opacity-60"}>
-                        {"Postal "}
-                      </span>
-                      {"- P.O. Box 10606, Accra North, Ghana"}
-                    </p>
+
+                <form id={"cvh-form"} className={"cvh-form"}>
+                  <label className={"cvh-form-label"}>
+                    {"Tell us about your vision"}
+                  </label>
+                  <div className={"cvh-form-row"}>
+                    <input className={"cvh-input"} type={"text"} name={"name"} placeholder={"Full name"} required />
+                    <input className={"cvh-input"} type={"email"} name={"email"} placeholder={"Email"} required />
                   </div>
-                </div>
-              </div>
-              <div className={"git-right"}>
-                <div className={"form-block w-form"}>
-                  <form id={"email-form"} name={"email-form"} data-name={"Email Form"} method={"post"} action={"mailto:info@maddygroupltd.com"} encType={"text/plain"} className={"form"}>
-                    <input className={"text-field w-input"} maxLength={256} name={"name"} data-name={"Name"} placeholder={"Full name"} type={"text"} id={"name"} required />
-                    <input className={"text-field w-input"} maxLength={256} name={"email"} data-name={"E-mail"} placeholder={"E-mail address"} type={"email"} id={"E-mail"} required />
-                    <input className={"text-field w-input"} maxLength={256} name={"company"} data-name={"Company name"} placeholder={"Company name"} type={"text"} id={"Company-name"} required />
-                    <select id={"Enquiry-type"} name={"enquiry"} data-name={"Enquiry type"} required className={"text-field select-field w-select"}>
-                      <option value={""}>
-                        {"How can we help?"}
-                      </option>
-                      <option value={"Cybersecurity"}>
-                        {"Cybersecurity"}
-                      </option>
-                      <option value={"Software development"}>
-                        {"Software development"}
-                      </option>
-                      <option value={"Software products"}>
-                        {"Software products"}
-                      </option>
-                      <option value={"UAV / IoT / procurement"}>
-                        {"UAV, IoT or ICT procurement"}
-                      </option>
-                      <option value={"Training"}>
-                        {"Training"}
-                      </option>
-                      <option value={"Request a quote"}>
-                        {"Request a quote"}
-                      </option>
-                      <option value={"Other"}>
-                        {"Other"}
-                      </option>
-                    </select>
-                    <select id={"Where-did-you-hear-about-us"} name={"source"} data-name={"Where did you hear about us?"} className={"text-field select-field w-select"}>
-                      <option value={""}>
-                        {"Where did you hear about us? (optional)"}
-                      </option>
-                      <option value={"Referral"}>
-                        {"Referral"}
-                      </option>
-                      <option value={"Search"}>
-                        {"Search"}
-                      </option>
-                      <option value={"Event"}>
-                        {"Event"}
-                      </option>
-                      <option value={"Other"}>
-                        {"Other"}
-                      </option>
-                    </select>
-                    <textarea required placeholder={"Message"} maxLength={5000} id={"Text-Message"} name={"message"} data-name={"Text Message"} className={"text-field message-area w-input"}></textarea>
-                    <input type={"submit"} data-wait={"Please wait..."} className={"button submit-button w-button"} value={"Request a quote"} />
-                  </form>
-                  <div className={"success-message w-form-done"}>
-                    <div>
-                      {"Thank you. We have received your message and will be in touch shortly."}
+                  <textarea className={"cvh-input cvh-textarea"} rows={4} name={"message"} placeholder={"What are you looking to build or improve..."} required></textarea>
+
+                  <div className={"cvh-services"}>
+                    <span className={"cvh-form-label"}>
+                      {"I need help with..."}
+                    </span>
+                    <div className={"cvh-tags"}>
+                      {SERVICES.map((service) => (
+                        <button type={"button"} key={service} className={"cvh-tag"} data-service={service}>
+                          {service}
+                        </button>
+                      ))}
                     </div>
                   </div>
-                  <div className={"error-message w-form-fail"}>
-                    <div>
-                      {"Something went wrong while sending the form. Please try again or email info@maddygroupltd.com."}
-                    </div>
+
+                  <button type={"submit"} id={"cvh-submit"} className={"cvh-submit"}>
+                    {"Send my message"}
+                  </button>
+                </form>
+
+                <div id={"cvh-success"} className={"cvh-success"} hidden>
+                  <div className={"cvh-success-check"}>
+                    {"✓"}
                   </div>
+                  <p className={"cvh-success-heading"}>
+                    {"You're all set!"}
+                  </p>
+                  <p className={"cvh-success-sub"}>
+                    {"Expect a reply within 24 hours."}
+                  </p>
                 </div>
-                <div data-w-id={"0c45a849-9c8e-3fe9-b20e-34dfaac634ba"} className={"git-right-bg"}></div>
               </div>
             </div>
           </div>
-        </section>
-        <img src={"/images/brand/accra-contact-prince-enos-31782030.jpg"} loading={"eager"} data-w-id={"850cdf28-50b2-a4dc-dddb-3c8bb97ffb23"} alt={""} className={"kv_get-in-touch maddy-background-image"} />
+        </div>
       </div>
       <div className={"page-wrapper is-overflow-hidden is-no-padding"}>
         <Footer brand="maddy" />
@@ -182,26 +199,49 @@ function PageRuntime() {
         dangerouslySetInnerHTML={{
           __html: `
 (function () {
-  var form = document.getElementById('email-form');
+  var form = document.getElementById('cvh-form');
   if (!form) return;
+
+  var tags = form.querySelectorAll('.cvh-tag');
+  var selected = [];
+  tags.forEach(function (tag) {
+    tag.addEventListener('click', function () {
+      var service = tag.getAttribute('data-service');
+      var index = selected.indexOf(service);
+      if (index === -1) {
+        selected.push(service);
+        tag.classList.add('is-active');
+      } else {
+        selected.splice(index, 1);
+        tag.classList.remove('is-active');
+      }
+    });
+  });
+
+  var submitBtn = document.getElementById('cvh-submit');
+  var successEl = document.getElementById('cvh-success');
+
   form.addEventListener('submit', function (event) {
     event.preventDefault();
     if (!form.reportValidity()) return;
+
     var data = new FormData(form);
     var lines = [];
     data.forEach(function (value, key) {
       if (String(value).trim()) lines.push(key + ': ' + value);
     });
+    if (selected.length) lines.push('Services: ' + selected.join(', '));
     var body = lines.join('\\n');
     var subject = encodeURIComponent('Website enquiry from ' + (data.get('name') || 'Maddy Group site'));
-    window.location.href = 'mailto:info@maddygroupltd.com?subject=' + subject + '&body=' + encodeURIComponent(body);
-    var done = form.parentElement && form.parentElement.querySelector('.w-form-done');
-    var fail = form.parentElement && form.parentElement.querySelector('.w-form-fail');
-    if (done) {
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    setTimeout(function () {
+      window.location.href = 'mailto:info@maddygroupltd.com?subject=' + subject + '&body=' + encodeURIComponent(body);
       form.style.display = 'none';
-      done.style.display = 'block';
-    }
-    if (fail) fail.style.display = 'none';
+      if (successEl) successEl.hidden = false;
+    }, 1000);
   });
 })();
 `,
