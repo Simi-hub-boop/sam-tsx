@@ -804,5 +804,11 @@ html.is-page-loading {
 /* Get in touch page: shrink the intro copy under "Contact us" so it takes up less visual space */
 .is-contact-hero .git-left p {
   font-size: 0.875rem;
-  line-height: 1.4rem;
+  line-height: 1.15rem;
+}
+
+/* Get in touch page: bump up the "Contact us" heading slightly and give it room to breathe above the text */
+.is-contact-hero .git-left h1.is-h2 {
+  font-size: 3.9rem;
+  margin-bottom: 1.5rem;
 }
