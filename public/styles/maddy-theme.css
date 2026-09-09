@@ -871,14 +871,14 @@ html.is-page-loading {
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  padding: 6.5rem 1rem;
+  padding: 5.5rem 1rem 2rem;
   font-family: 'Inter', sans-serif;
 }
 @media (min-width: 640px) {
-  .cvh-inner { padding: 7rem 1.5rem; min-height: calc(100vh - 32px); }
+  .cvh-inner { padding: 6rem 1.5rem 2.5rem; min-height: calc(100vh - 32px); }
 }
 @media (min-width: 768px) {
-  .cvh-inner { padding: 8rem 2rem; min-height: calc(100vh - 48px); }
+  .cvh-inner { padding: 7.5rem 2rem 3rem; min-height: calc(100vh - 48px); }
 }
 @media (min-width: 1024px) {
   .cvh-inner { height: calc(100vh - 48px); min-height: 0; }
