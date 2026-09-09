@@ -833,6 +833,9 @@ html.is-page-loading {
   overflow: hidden;
   min-height: calc(100vh - 24px);
   background-color: #0a1458;
+  transform: scale(calc(1 - 0.1 * var(--hero-inset, 0)));
+  transform-origin: center;
+  will-change: transform;
 }
 @media (min-width: 640px) {
   .cvh-card { border-radius: 1.5rem; min-height: calc(100vh - 32px); }
@@ -868,33 +871,17 @@ html.is-page-loading {
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  padding: 6.5rem 1rem 2rem;
+  padding: 6.5rem 1rem;
   font-family: 'Inter', sans-serif;
 }
 @media (min-width: 640px) {
-  .cvh-inner { padding: 7rem 1.5rem 2.5rem; min-height: calc(100vh - 32px); }
+  .cvh-inner { padding: 7rem 1.5rem; min-height: calc(100vh - 32px); }
 }
 @media (min-width: 768px) {
-  .cvh-inner { padding: 8rem 2rem 3rem; min-height: calc(100vh - 48px); }
+  .cvh-inner { padding: 8rem 2rem; min-height: calc(100vh - 48px); }
 }
 @media (min-width: 1024px) {
   .cvh-inner { height: calc(100vh - 48px); min-height: 0; }
-}
-
-.cvh-headline {
-  margin: 0;
-  max-width: 32rem;
-  color: #fff;
-  font-size: 1.9rem;
-  font-weight: 500;
-  line-height: 1.2;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
-}
-@media (min-width: 640px) {
-  .cvh-headline { font-size: 2.4rem; }
-}
-@media (min-width: 1280px) {
-  .cvh-headline { font-size: 2.9rem; }
 }
 
 .cvh-form-card {

@@ -67,7 +67,7 @@ function PageHead() {
       <meta content={"width=device-width, initial-scale=1"} name={"viewport"} />
       <link href={"/styles/webflow.css"} rel={"stylesheet"} type={"text/css"} />
       <link href={"/styles/maddy-theme.css"} rel={"stylesheet"} type={"text/css"} />
-      <link href={"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"} rel={"stylesheet"} />
+      <link href={"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"} rel={"stylesheet"} />
       <style dangerouslySetInnerHTML={{ __html: sitePageCode.getInTouch[0] }} />
       <script type={"text/javascript"} dangerouslySetInnerHTML={{ __html: sitePageCode.getInTouch[1] }} />
       <SiteIcons />
@@ -91,15 +91,6 @@ function GetInTouchContent() {
             />
             <div className={"cvh-overlay"}></div>
             <div className={"cvh-inner"}>
-              <p className={"cvh-headline"}>
-                {"Let's build something"}
-                <br />
-                {"secure and "}
-                <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400 }}>
-                  {"scalable"}
-                </span>
-              </p>
-
               <div className={"cvh-form-card"}>
                 <h2 className={"cvh-form-heading"}>
                   {"Say hello! \u{1F44B}"}

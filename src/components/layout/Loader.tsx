@@ -133,7 +133,7 @@ export function LoaderRuntime() {
 (function () {
   var heroes = document.querySelectorAll(
     '.section.is-hero-section, .section.is-why-flow-hero, ' +
-      '.section.is-products-hero, .section.is-why-about-hero'
+      '.section.is-products-hero, .section.is-why-about-hero, .cvh-wrap'
   );
   if (!heroes.length) return;
 
