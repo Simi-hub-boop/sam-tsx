@@ -1078,7 +1078,7 @@ function ProductsAdditions() {
           </div>
         </div>
       </section>
-      <section className={"section is-coverages-section"}>
+      <section id={"more-services"} className={"section is-coverages-section"}>
         <div className={"w-layout-blockcontainer container w-container"}>
           <div className={"coverages-flex"}>
             <h2>

@@ -828,3 +828,9 @@ html.is-page-loading {
   color: var(--color--flow-pastel-lime-300);
   font-weight: 700;
 }
+
+/* Products page: match "More services" heading size to "Software products" (both smaller) */
+#software-products .coverages-flex h2,
+#more-services .coverages-flex h2 {
+  font-size: 2rem;
+}
