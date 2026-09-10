@@ -820,7 +820,7 @@ html.is-page-loading {
   justify-content: flex-start;
 }
 
-/* Partner pages (e.g. /partners/cardlogix): shrink the "Request a [Partner] quote" heading */
-#partner-quote h2.is-h2 {
-  font-size: 2rem;
+/* CardLogix partner page only: shrink the "Request a CardLogix quote" heading */
+#partner-quote[data-partner="cardlogix"] h2.is-h2 {
+  font-size: 2.3rem;
 }

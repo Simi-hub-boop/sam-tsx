@@ -134,7 +134,7 @@ function Categories({ config }: { config: PartnerPageConfig }) {
 function QuoteSection({ config }: { config: PartnerPageConfig }) {
   return (
     <div className={"page-wrapper dark-wrapper touch-hero"}>
-      <section id={"partner-quote"} className={"section is-get-in-touch-section partner-quote-section"}>
+      <section id={"partner-quote"} data-partner={config.slug} className={"section is-get-in-touch-section partner-quote-section"}>
         <div className={"partner-quote-media"} aria-hidden={"true"}>
           <img className={"partner-quote-media__img"} src={config.heroImageSrc} alt={""} loading={"lazy"} />
           <div className={"partner-quote-media__overlay"} />
