@@ -820,7 +820,11 @@ html.is-page-loading {
   justify-content: flex-start;
 }
 
-/* CardLogix partner page only: shrink the "Request a CardLogix quote" heading */
+/* CardLogix partner page only: shrink the "Request a CardLogix quote" heading,
+   push it up away from the crowded paragraph below, and highlight it as a subheading */
 #partner-quote[data-partner="cardlogix"] h2.is-h2 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--color--flow-pastel-lime-300);
+  font-weight: 700;
 }
