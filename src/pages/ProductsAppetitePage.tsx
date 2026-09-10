@@ -1013,9 +1013,6 @@ function ProductsAdditions() {
             <h2>
               {"Software products"}
             </h2>
-            <div className={"is-font-size-body-m"}>
-              {"Flagship platforms we build and support. Request a demo or quote."}
-            </div>
           </div>
           <div className={"coverages-grid"}>
             <div className={"coverage"}>
@@ -1087,9 +1084,6 @@ function ProductsAdditions() {
             <h2>
               {"More services"}
             </h2>
-            <div className={"is-font-size-body-m"}>
-              {"Additional lines that sit alongside cybersecurity, software and IoT."}
-            </div>
           </div>
           <div className={"coverages-grid"}>
             <div className={"coverage"}>
